@@ -1,19 +1,16 @@
+let i = 0; 
 
-// for (let i = 5; i >= 0; i--) {
-//     if (i % 2 !== 0) console.log(i);
-// }
+while (i < 5) {
+    console.log(i);
+    // i++;
+}
 
-// let i = 9;
-// while (i <= 5) {
-//     if (i % 2 !== 0) console.log(i);
-//     i++;
-// }
+while(true) {
+}
 
-// do-while 
-
-let i = 9;
-
+let x = 0;
 do {
-    if (i % 2 !== 0) console.log(i);
-    i++;
-} while(i<= 5);
+    // x++;
+} while(x < 5); 
+
+for (let i = 0; i > 0;) {} 
