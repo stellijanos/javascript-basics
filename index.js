@@ -1,10 +1,12 @@
 
-let x = 10;
+let x = 1;
 
-x++;
-x = x + 5;
-x += 5; // addition assignemnt Operator
+// Relational
+console.log(x > 0);
+console.log(x >= 1);
+console.log(x < 1);
+console.log(x <= 1);
 
-x = x * 3 
-x *= 3 // multiplication assignment Operator
-
+// Equality
+console.log(x === 1);
+console.log(x !== 1);
