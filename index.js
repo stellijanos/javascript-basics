@@ -1,20 +1,14 @@
-// for 
-// while 
-// do-while
 
-// for-in - to iterate over the properties of an object
-const person = {
-    name: 'Janos',
-    age: 30
+let i = 0; 
+while (i <= 10) {
+
+    // if ( i === 5) break; // jump out of a loop
+
+    if (i % 2 === 0) {
+        i++;
+        continue; // jump to the next iteration
+    }
+
+    console.log(i);
+    i++;
 }
-
-for (let key in person) {
-    console.log(key, person[key]);
-}
-
-// for-of to iterate over the elements in an array
-const colors = ['red', 'green', 'blue'];
-
-for (let color of colors) 
-    console.log(color);
-
