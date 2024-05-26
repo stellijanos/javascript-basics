@@ -1,18 +1,24 @@
 
-// Falsy (false)
-// undefined
-// null
-// 0
-// false
-// ''
-// NaN
+// 1 = 00000001
+// 2 = 00000010
+// 3 = 00000011
+// R = 00000000
 
-// Anything that is not Falsy -> Truthy
+// Read, Write, Execute
+// 00000100 - only read
+// 00000110 - only read and write
+// 00000111 - all 3 permissions
 
-// Short-circuiting 
+console.log( 1 | 2); // Bitwise OR
+console.log( 1 & 2); // Bitwise AND
 
-let userColor = undefined;
-let defaultColor = 'blue';
-let currentColor = userColor || defaultColor;
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
 
-console.log(currentColor);
+let myPermission = 0;
+myPermission = myPermission | writePermission;
+console.log(myPermission);
+
+let message = (myPermission & readPermission) ? 'yes' : 'no';
+console.log(message);
