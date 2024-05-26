@@ -1,2 +1,7 @@
-let x = (2 + 3) * 4;
-console.log(x);
+let a = 'red';
+let b = 'blue';
+
+[a, b] = [b,a];
+
+console.log(a);
+console.log(b);
