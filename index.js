@@ -1,14 +1,7 @@
 
-let i = 0; 
-while (i <= 10) {
+let number = max(0,1);
+console.log(number);
 
-    // if ( i === 5) break; // jump out of a loop
-
-    if (i % 2 === 0) {
-        i++;
-        continue; // jump to the next iteration
-    }
-
-    console.log(i);
-    i++;
+function max(num1, num2) {
+    return num1 > num2 ? num1 : num2;
 }
