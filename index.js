@@ -10,3 +10,23 @@ let selectedColor = null; // we use null, if we want to clear the value of a var
  
 // undefined is a type but also a value
 // null value has type 'object'
+
+// Primitives/ Value Types: string, number, boolean, undefined, null
+// Reference Types : Object, Array, Function
+
+// Object
+let person = {   // curly braces - Object Literal
+    name: 'Janos',
+    age: 20
+}
+
+
+// Dot Notation 
+person.name = 'John';
+
+// Bracket Notation 
+let selection = 'name';
+person[selection] = 'Mary';
+
+console.log(person.name);
+
