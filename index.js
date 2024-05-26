@@ -1,7 +1,6 @@
 
-let number = max(0,1);
-console.log(number);
+console.log(isLandScape(300, 600));
 
-function max(num1, num2) {
-    return num1 > num2 ? num1 : num2;
+function isLandScape(width, height) {
+    return width > height;
 }
