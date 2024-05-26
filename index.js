@@ -1,9 +1,21 @@
 
-showNumbers(10);
+// Falsy
+// undefined
+// null
+// ''
+// false
+// 0
+// NaN
 
-function showNumbers(limit) {
-    for (let i = 0 ; i <=limit; i++) {
-        const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
-        console.log(i,message);
+const array = [0, undefined, 1, 2, 3, 0];
+
+console.log(countTruthy(array));
+
+
+function countTruthy(array) {
+    let count = 0;
+    for (let elem of array) {
+        if (elem) count++;
     }
+    return count;
 }
