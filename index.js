@@ -1,10 +1,9 @@
 
-// Strict Equality Operator (Type + Value)
-console.log(1 === 1);
-console.log('1' === 1);
+// if a customer has more than 100 points, 
+// they are a 'gold' customer, otherwise,
+// they are a 'silver' customer
 
-// Lose Equality Operator (Value)
-console.log(1 == 1);
-console.log('1' == 1);
+let points = 90;
+let type = points > 100 ? 'gold' : 'silver';
 
-console.log(true == 1);
+console.log(type);
