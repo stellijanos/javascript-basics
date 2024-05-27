@@ -1,13 +1,22 @@
 
-const numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
+let another = numbers;
 
-// End
-const last = numbers.pop();
-// console.log(last);
+// Solution 1
+numbers = [];
 
-// Beginning
-const first = numbers.shift();
+// Solution 2
+numbers.length = 0;
 
-// Middle
-numbers.splice(1, 1);
+// Solution 3
+numbers.splice(0, numbers.length);
+
+// Solution 4
+
+while (numbers.length) {
+    numbers.pop();
+}
+
+
 console.log(numbers);
+console.log(another);
