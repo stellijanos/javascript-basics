@@ -1,27 +1,13 @@
 
-// Camel Notation: oneTwoThreeFour
-// Pascal Notation: OnwTwoThreeFour
-
-// Factory function 
-function createCircle(radius) {
-    return {
-        radius,
-        draw() {
-            console.log('draw');
-        }
-    };
+const circle = {
+    radius: 1
 }
 
 
-const myCircle = createCircle(1);
+circle.color = 'yellow';
+circle.draw = function() {}
 
-// Constructor Function  (naming convention with Pascal Notation)
+delete circle.color;
+delete circle.draw;
 
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function() {
-        console.log('draw');
-    }
-}
-
-const circle = new Circle(1);
+console.log(circle);
