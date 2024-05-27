@@ -1,19 +1,19 @@
 
-// Object-oriented Programming (OOP)
 
-const circle = {
-    radius: 1,
-    location: {
-        x: 1,
-        y: 1
-    },
-    isVisible: true,
-    draw: function() {
-        console.log('draw');
-    },
-    move: function() {}
+// Facctory function 
+
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw');
+        }
+    };
 }
 
- // Purpose of an Object is to group related variables or functions
 
-circle.draw(); // draw method (function is part of an object -> method)
+const circle1 = createCircle(1);
+console.log(circle1);
+
+const circle2 = createCircle(2);
+console.log(circle2);
