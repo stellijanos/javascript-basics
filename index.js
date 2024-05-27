@@ -6,20 +6,16 @@ const circle = {
     }
 };
 
-for (let key in circle) {
-    console.log(key, circle[key]);
-}
 
-for (let key of Object.keys(circle)) {  // Object is not iterable
-    console.log(key);
-}
+// for (let key in circle) {
+//     another[key] = circle[key];
+// }
 
-for (let entry of Object.entries(circle)) { 
-    console.log(entry);
-}
+// const assign = Object.assign({
+//     color:'yellow'
+// }, circle); // cloning circle properties and methods into another
 
-if ('color' in circle) console.log('yes'); // verify if a given object has a property
 
-// function Object() {}
-// const x = {value: 1}; // internally is translated to 
-// const y = new Object();
+const another = {...circle}; // spread the circle Object
+
+console.log(another);
