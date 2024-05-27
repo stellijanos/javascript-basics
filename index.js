@@ -1,25 +1,25 @@
-// Value Types
-// Number, String, Boolea, Symbol, undefined, null
 
-// Reference Types
-// Object Function Array
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
 
-let x = {value: 10};
-let y = x;
+for (let key in circle) {
+    console.log(key, circle[key]);
+}
 
-x.value = 20;
-// the object name (address) is passed by reference
-// x and y are pointing to the same object in the memory
+for (let key of Object.keys(circle)) {  // Object is not iterable
+    console.log(key);
+}
 
-// Primitives are copied by their VALUE
-// Objects are copied by their REFERENCE
+for (let entry of Object.entries(circle)) { 
+    console.log(entry);
+}
 
-let obj = {value: 10};
+if ('color' in circle) console.log('yes'); // verify if a given object has a property
 
-function increase(number) { // 2 independent copies
-    number.value++;
-} 
-
-increase(obj);
-
-console.log(obj);
+// function Object() {}
+// const x = {value: 1}; // internally is translated to 
+// const y = new Object();
