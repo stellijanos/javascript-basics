@@ -1,13 +1,8 @@
 
-const circle = {
-    radius: 1
-}
+let x = {}; // JS Engine translates it to new Object();
 
+// let x = new Object();
 
-circle.color = 'yellow';
-circle.draw = function() {}
-
-delete circle.color;
-delete circle.draw;
-
-console.log(circle);
+new String(); // '', "", ``
+new Boolean(); // true, false 
+new Number(); // 1, 2, 3
