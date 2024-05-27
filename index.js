@@ -4,15 +4,21 @@
 // zipCode 
 // showAddress(address)
 
-const address = {
-    street: 'a',
-    city: 'b',
-    zipCode: 'c'
-};
+const address =  createAddress('a', 'b', 'c');
+const another = new Address('a', 'b', 'c');
 
-function showAddress(address) {
-    for (let key in address)
-        console.log(key, address[key]);
+// factory Function
+function createAddress(street, city, zipCode) {
+    return {
+        street,
+        city,
+        zipCode
+    }
 }
 
-showAddress(address);
+// Constructor Function 
+function Address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}
