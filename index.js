@@ -1,10 +1,12 @@
 
-const priceRanges = [
-    {label: '$', tolltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10},
-    {label: '$$', tolltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20},
-    {label: '$$$', tolltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50},  
-];
+const numbers = [3, 4];
 
-let restaurants = [
-    {averagePerPerson: 5}
-];
+// End
+numbers.push(5, 6);
+
+// Beginning
+numbers.unshift(1, 2);
+
+// Middle
+numbers.splice(2, 0, 'a', 'b');
+console.log(numbers);
