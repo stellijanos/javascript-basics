@@ -1,24 +1,17 @@
 
-const numbers = [2, 3, 0, -1, 1];
+const numbers = [1, -1, 2, 3];
 
-const filtered = numbers.filter(n => n > 0);
-
-const items = filtered.map(n => '<li>' + n + '</li>');
-
-const html = '<ul>' + items.join('') + '</ul>';
-// console.log(html);
-
-// const objects = filtered.map(n =>  {value: n}); // undefined elements array
-// js engine thinks that we are defining a function with {}
-const objects = filtered.map(n =>  ({value: n}));
-
-console.log(objects);
+// with defining initial value for accumlator
+// a = 0, c = 1 => a = 1
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
 
 
-const result = numbers
-            .filter(n => n > 0)
-            .map(n =>  ({value: n}))
-            .filter(obj => obj.value > 1)
-            .map(obj => obj.value);
+// after eliminatig initial value for accumlator
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
+const sum = numbers.reduce((accumlator, currentValue) => accumlator + currentValue);
 
-console.log(result);
+console.log(sum);
