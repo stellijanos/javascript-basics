@@ -1,21 +1,10 @@
 
-const numbers = [2, 3, 1];
+const numbers = [2, 3, -1, 1];
 
-numbers.sort(); // converts into string, then sorts them
-// console.log(numbers);
+// every() -> every element
+const allPositive = numbers.every(value => value >= 0);
+console.log(allPositive);
 
-numbers.reverse();
-// console.log(numbers);
-
-
-const courses = [
-    {id: 1, name: 'Node.js'},
-    {id: 2, name: 'JavaScript'},
-];
-
-courses.sort((a, b) => a.id - b.id); // sort asceding
-courses.sort((a, b) => b.id - a.id); // sort desceding
-console.log(courses);
-
-courses.sort((a,b) => a.name.toLowerCase() - b.name.toLowerCase());
-console.log(courses);
+// some() -> at least 1 element
+const atLeast1Positive = numbers.some(value => value >= 0);
+console.log(atLeast1Positive);
