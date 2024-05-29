@@ -1,5 +1,9 @@
 
+
+walk();
+
 // Function declaration
+
 function walk() {
     console.log('walk');
 }
@@ -18,3 +22,7 @@ let move = run;
 
 run();
 move();
+
+// variable or constant cannot be used before declared, only function declarations
+
+// hoisting is the process of moving function delcarations to the top of the file
