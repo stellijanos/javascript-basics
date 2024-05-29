@@ -1,20 +1,12 @@
 
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 1, -1];
 
-const output = move(numbers, 1, 3);
+const count = countOccurencies(numbers, 2);
 
-console.log(output);
+console.log(count);
 
-function move(array, index, offset) {
-
-    const position = index + offset;
-    if (position >= array.length || position < 0) {
-        console.error('Invalid offset');
-        return;
-    }
-
-    const output = [...array];
-    const element = output.splice(index, 1)[0];
-    output.splice(position, 0, element);
-    return output;
+function countOccurencies(array, seachElement) {
+    // return array.filter(number => number === seachElement).length;
+    return array.reduce((acc, currentElement) => 
+        currentElement === seachElement ? acc+1 : acc, 0);
 }
