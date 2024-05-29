@@ -1,6 +1,19 @@
 
-function interest(principal, rate = 3.5, years = 5) {
-    return principal * rate / 100 * years;
-}
+const person = {
+    firstname: 'Janos',
+    lastname: 'Stelli',
+    get fullname() {
+        return `${person.firstname} ${person.lastname}`;
+    },
+    set fullname(value) {
+        const parts = value.split(' ');
+        this.firstname = parts[0];
+        this.lastname = parts[1];
+    }
+};
 
-console.log(interest(10000));
+// getters => access properties
+// setters => change (mutate) them
+
+person.fullname = 'John Smith';
+console.log(person);
