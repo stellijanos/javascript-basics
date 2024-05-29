@@ -1,19 +1,20 @@
 
-const movies = [
-    {title: 'a', year: 2018, rating: 4.5},
-    {title: 'b', year: 2018, rating: 4.7},
-    {title: 'c', year: 2018, rating: 3},
-    {title: 'd', year: 2017, rating: 4.5},
-]
+// Function declaration
+function walk() {
+    console.log('walk');
+}
 
-// All the movies in 2018 with rating > 4 
-// Sort them by their rating
-// Decsending order
-// Pick their title
+// Anonymous Function Expression 
+let run = function() {
+    console.log('run');
+};
 
-const titles = movies
-                .filter(movie => movie.year === 2018 && movie.rating > 4)
-                .sort((a,b) => b.rating - a.rating)
-                .map(movie => movie.title);
+// Named Function Expression 
+let swim = function walk() {
+    console.log('swim');
+};
 
-titles.forEach(title => console.log(title));
+let move = run;
+
+run();
+move();
