@@ -1,12 +1,17 @@
 
-const numbers = [1, 2, 3, 4, 1, -1];
+const numbers = [1, 2, 5, 3, 4, 1];
 
-const count = countOccurencies(numbers, 2);
+const max = getMax(numbers);
 
-console.log(count);
+console.log(max);
 
-function countOccurencies(array, seachElement) {
-    // return array.filter(number => number === seachElement).length;
-    return array.reduce((acc, currentElement) => 
-        currentElement === seachElement ? acc+1 : acc, 0);
+function getMax(array) {
+    // let max = array[0];
+    // array.forEach(element => {
+    //     if (max < element)
+    //         max = element;
+    // });
+    // return max;
+    if (array.length === 0) return undefined;
+    return array.reduce((max, current) => (current > max) ? current : max);
 }
