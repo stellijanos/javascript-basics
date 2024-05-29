@@ -1,24 +1,39 @@
+// this = the object that is executing the current function
 
-function start() {
-    for (var i = 0; i< 5; i++) {
-        if (true) {
-            let color = 'red';
-        }
+// method -> obj
+// function ->global (window in browser, global in node)
+
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function(tag) {
+            console.log(this.title, tag); // reffers to the window object
+            // its a regular function in foreach
+        }, this); // to override this (window)
     }
-    console.log(color);
 }
 
-// var
-// ES6 (ES2015: let, const => block-scoped)
 
-// start();
-
-var color = 'red'; // outside of a function, creates a global variable and attaches to the window object of the browser
-let age = 30;
-
-
-function sayHi() {
-    console.log('hi');
+video.stop = function() {
+    console.log(this); // refers to the video object
 }
 
-// avoid using var keyword, because it creates variables that are function scope, not block scope.
+// video.play();
+// video.stop();
+
+function playVideo() {
+    console.log(this); // refers to the Window object
+}
+
+// playVideo();
+
+function Video(title) {
+    this.title = title;
+    console.log(this);
+}
+
+const v = new Video('b');
+
+
+video.showTags();
